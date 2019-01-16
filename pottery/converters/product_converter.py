@@ -12,3 +12,10 @@ def product_entity_to_product(product_entity):
     # products.Product(id=produname=product_entity['name'],)
     pe_to_p =Product(name=product_entity.name,title=product_entity.title,description=product_entity.description,weight=product_entity.weight,dimentions=product_entity.dimentions,price=product_entity.price,image=product_entity.image,id=product_entity.id)
     return pe_to_p
+
+def product_entities_to_products(product_entities):
+    pes_to_ps= []
+    if product_entities != None:
+        for pes in product_entities:
+            pes_to_ps.append(product_entity_to_product(pes))
+    return pes_to_ps

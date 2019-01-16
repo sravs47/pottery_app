@@ -2,6 +2,7 @@ from pottery.entities import products
 from pottery.resources.exceptions import PotteryException
 from pottery.converters import product_converter
 from pottery.resources.utils import to_dict
+import pymongo
 
 
 # convert the product object which comes from product_catalog to product entity object(database object) and save.
@@ -29,6 +30,11 @@ class product_middleware:
         print(prod_data)
         return product_converter.product_entity_to_product(prod_data)
 
+    def get_products(self,limit=10,marker=0):
+        print(limit)
+        print(marker)
+        product_entities = products.product_entity.objects.order_by([('_id',pymongo.ASCENDING)]).skip(limit*marker).limit(limit)
+        return product_converter.product_entities_to_products(product_entities)
 
     def delete_product(self, product_id):
         if products.product_entity.objects.get({'_id':product_id}) == None :

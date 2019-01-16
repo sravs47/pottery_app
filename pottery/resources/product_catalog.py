@@ -1,17 +1,33 @@
-from flask import  Response, request
+from flask import Response, request
 import json
 from pottery import app
-from pottery.models import products
+from pottery.models import products, pagination
 from .utils import JSON_MIME_TYPE, to_dict
 from .Data import products_list
 from pottery.middleware.product_orchestrator import product_middleware
 from pottery.resources.exceptions import PotteryException
 from logging import getLogger as logger
 
+
+# get all products using pagination
 @app.route('/products')
 def get_products():
-    response = Response(json.dumps(products_list), status=200, mimetype=JSON_MIME_TYPE)
-    return response
+    limit = int(request.args.get('limit', 10))  # 10 is default value if limit is not sent
+    marker = int(request.args.get('marker', 0))
+
+    get_products = product_middleware().get_products(limit, marker)
+    products = []
+    for product in get_products:
+        products.append(to_dict(product))
+
+    paginated: dict = to_dict(pagination.Pagination(limit, marker, 'products'))
+
+    resp = {
+        'products':products,
+        'pagination':paginated
+
+    }
+    return Response(json.dumps(resp), 200, mimetype=JSON_MIME_TYPE)
 
 
 @app.route('/products/<int:product_id>')
@@ -36,16 +52,16 @@ def add_product():
     except PotteryException as e:
         if 'A1' in str(e):
             status = 400
-            resp=str(e)
+            resp = str(e)
     except Exception as e:
-        status=500
-        resp= str(e)
+        status = 500
+        resp = str(e)
     return Response(resp, status=status, mimetype=JSON_MIME_TYPE)
 
 
 @app.route('/products/<int:product_id>', methods=['DELETE'])
 def del_product(product_id):
-    status=204
+    status = 204
     try:
         product_middleware().delete_product(product_id)
     except PotteryException as e:
