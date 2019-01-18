@@ -1,17 +1,21 @@
-from flask import Flask
+from flask import Flask,Blueprint
+from pottery.resources.product_catalog import potteryapp
 # object creation
 app = Flask(__name__)
+app.register_blueprint(potteryapp)
+
 
 import pottery.views
 import pottery.resources.product_catalog
 import pottery.models.products
 from pymodm import connect
+import logging
 
 # Db connectin
 connect("mongodb://localhost:27017/pottery")
 
 
-import logging
+# name ="pottery"
 
 # temporary products
 # create list of product models.
@@ -27,4 +31,4 @@ formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True)

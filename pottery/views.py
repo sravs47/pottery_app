@@ -1,5 +1,7 @@
+from flask import Blueprint
 from pottery import app
+potteryapp = Blueprint('potteryapp',__name__)
 
-@app.route('/')
+@potteryapp.route('/')
 def index():
     return 'Hello world'

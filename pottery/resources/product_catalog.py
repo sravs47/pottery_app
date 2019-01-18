@@ -1,16 +1,17 @@
-from flask import Response, request
 import json
-from pottery import app
-from pottery.models import products, pagination
-from .utils import JSON_MIME_TYPE, to_dict
-from .Data import products_list
-from pottery.middleware.product_orchestrator import product_middleware
-from pottery.resources.exceptions import PotteryException
 from logging import getLogger as logger
 
+from flask import Response, request, Blueprint
+
+from pottery.middleware.product_orchestrator import product_middleware
+from pottery.models import products, pagination
+from pottery.resources.exceptions import PotteryException
+from .utils import JSON_MIME_TYPE, to_dict
+
+potteryapp = Blueprint('potteryapp',__name__)
 
 # get all products using pagination
-@app.route('/products')
+@potteryapp.route('/products')
 def get_products():
     limit = int(request.args.get('limit', 10))  # 10 is default value if limit is not sent
     marker = int(request.args.get('marker', 0))
@@ -30,7 +31,7 @@ def get_products():
     return Response(json.dumps(resp), 200, mimetype=JSON_MIME_TYPE)
 
 
-@app.route('/products/<int:product_id>')
+@potteryapp.route('/products/<int:product_id>')
 def get_product(product_id):
     gp = product_middleware().get_product(product_id)
     resp = to_dict(gp)
@@ -38,7 +39,7 @@ def get_product(product_id):
     return Response(json.dumps(resp), 200, mimetype=JSON_MIME_TYPE)
 
 
-@app.route('/products', methods=['POST'])
+@potteryapp.route('/products', methods=['POST'])
 def add_product():
     status = 201
     resp = None
@@ -59,7 +60,7 @@ def add_product():
     return Response(resp, status=status, mimetype=JSON_MIME_TYPE)
 
 
-@app.route('/products/<int:product_id>', methods=['DELETE'])
+@potteryapp.route('/products/<int:product_id>', methods=['DELETE'])
 def del_product(product_id):
     status = 204
     try:
@@ -70,7 +71,7 @@ def del_product(product_id):
     return Response(status=status)
 
 
-@app.route('/products/<int:product_id>', methods=['PUT'])
+@potteryapp.route('/products/<int:product_id>', methods=['PUT'])
 def update_product(product_id):
     body = request.json
     status = 201
