@@ -31,8 +31,9 @@ EXPOSE 5000
 
 RUN mkdir -p /data/db
 
+VOLUME ["/data/db"]
 
-CMD ["python3.6", "/pottery/pottery/__init__.py"]
+CMD mongod --fork --syslog ; python3.6 /pottery/pottery/__init__.py
 
 
 
