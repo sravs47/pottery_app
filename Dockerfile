@@ -1,4 +1,4 @@
-FROM centos:7.5.1804
+FROM centos:7
 
 ENV PYTHON_VERSION "3.6.0"
 
@@ -31,7 +31,7 @@ EXPOSE 5000
 
 RUN mkdir -p /data/db
 
-ENTRYPOINT ["m]
+
 CMD ["python3.6", "/pottery/pottery/__init__.py"]
 
 
