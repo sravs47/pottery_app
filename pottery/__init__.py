@@ -12,6 +12,7 @@ from pymodm import connect
 import logging
 
 # Db connectin
+# If you are running this inside docker and want to connect to mongo on the host machine then DNS is 'host.docker.internal'
 connect("mongodb://localhost:27017/pottery")
 
 
