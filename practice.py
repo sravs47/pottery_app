@@ -153,17 +153,41 @@ def debug(func):
 #     print(f"Using {greeter !r}")
 #     return greeter_func(name)
 
-import pytest
+# import pytest
+#
+# def capital_case(x):
+#     if not isinstance(x,str):
+#         raise TypeError('Please provide a string argument')
+#     return x.capitalize()
+#
+# def test_capital_case():
+#     assert capital_case('semaphore')=='Semaphore'
+#
+# def test_raise_exception_on_non_string():
+#     with pytest.raises(TypeError):
+#         capital_case(9)
+#
 
-def capital_case(x):
-    if not isinstance(x,str):
-        raise TypeError('Please provide a string argument')
-    return x.capitalize()
 
-def test_capital_case():
-    assert capital_case('semaphore')=='Semaphore'
+def sravani():
+    i =0
+    j=1
+    print('here1')
+    assert i==0
+    print('here2')
+    assert j==1
+    print('here3')
+    assert j==i
+    print('here4')
 
-def test_raise_exception_on_non_string():
-    with pytest.raises(TypeError):
-        capital_case(9)
+sravani()
 
+
+#
+# def avg(marks):
+#     assert len(marks) != 0
+#     assert mark1[0]==15
+#     print("something")
+#
+# mark1 = [10]
+# print("Average of mark1:",avg(mark1))

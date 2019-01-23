@@ -19,3 +19,4 @@ def product_entities_to_products(product_entities):
         for pes in product_entities:
             pes_to_ps.append(product_entity_to_product(pes))
     return pes_to_ps
+

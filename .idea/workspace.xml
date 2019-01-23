@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf7fc5fa-d206-4e98-90fe-7a86be55bf8e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pottery.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/pottery.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pottery.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pottery.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pottery.egg-info/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pottery.egg-info/requires.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pottery/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pottery/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pottery/resources/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pottery/resources/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pottery/converters/product_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/pottery/converters/product_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pottery/testing/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pottery/testing/test_product_catalog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,46 +16,88 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="product_catalog.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pottery/resources/product_catalog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_product_catalog.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pottery/testing/test_product_catalog.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="practice.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/practice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="159" column="57" selection-start-line="159" selection-start-column="57" selection-end-line="159" selection-end-column="57" />
-              <folding>
-                <element signature="e#904#933#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exceptions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pottery/resources/exceptions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.46134868">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="product_catalog.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pottery/resources/product_catalog.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/setup.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="25" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="exceptions.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pottery/resources/exceptions.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="product_converter.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pottery/converters/product_converter.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#0#52#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="test_product_converter.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pottery/test_pottery/test_converters/test_product_converter.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="223">
+                  <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="products.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pottery/models/products.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="16" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="products.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pottery/entities/products.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,13 +148,11 @@
         <option value="$PROJECT_DIR$/pottery/middleware/product_middleware.py" />
         <option value="$PROJECT_DIR$/pottery/entities/product_catalog_models.py" />
         <option value="$PROJECT_DIR$/pottery/entities/product_model.py" />
-        <option value="$PROJECT_DIR$/pottery/models/products.py" />
         <option value="$PROJECT_DIR$/pottery/resources/utils.py" />
         <option value="$PROJECT_DIR$/pottery/entities/products.py" />
         <option value="$PROJECT_DIR$/pottery/middleware/product_orchestrator.py" />
         <option value="$PROJECT_DIR$/pottery/entities/pagination.py" />
         <option value="$PROJECT_DIR$/pottery/models/pagination.py" />
-        <option value="$PROJECT_DIR$/pottery/converters/product_converter.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/pottery/views.py" />
         <option value="$PROJECT_DIR$/pottery/resources/product_catalog.py" />
@@ -125,9 +162,14 @@
         <option value="$PROJECT_DIR$/pottery/__init__.py" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/practice.py" />
         <option value="$PROJECT_DIR$/pottery/resources/exceptions.py" />
         <option value="$PROJECT_DIR$/pottery/testing/test_product_catalog.py" />
+        <option value="$PROJECT_DIR$/practice.py" />
+        <option value="$PROJECT_DIR$/pottery/testing/converters/test_product_converter.py" />
+        <option value="$PROJECT_DIR$/test_pottery/test_converters/test_product_converter.py" />
+        <option value="$PROJECT_DIR$/pottery/converters/product_converter.py" />
+        <option value="$PROJECT_DIR$/pottery/models/products.py" />
+        <option value="$PROJECT_DIR$/pottery/test_pottery/test_converters/test_product_converter.py" />
       </list>
     </option>
   </component>
@@ -165,36 +207,6 @@
             </path>
             <path>
               <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="pottery" type="462c0819:PsiDirectoryNode" />
-              <item name="testing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pottery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -214,9 +226,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pottery/models" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pottery" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pottery/models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -231,7 +243,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.practice">
+  <component name="RunManager" selected="Python.test_product_converter">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pottery" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -286,6 +298,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test_product_converter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pottery" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pottery/test_pottery/test_converters" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pottery/test_pottery/test_converters/test_product_converter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pottery" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,38 +334,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pottery" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pottery" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pottery/views.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.views" />
       <item itemvalue="Python.product_catalog" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.utils" />
       <item itemvalue="Python.practice" />
+      <item itemvalue="Python.test_product_converter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_product_converter" />
         <item itemvalue="Python.practice" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.product_catalog" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -362,9 +374,9 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003569" side_tool="true" weight="0.32918397" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964312" visible="true" weight="0.32918397" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964312" weight="0.32918397" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30694443" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15555556" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Job Explorer" order="4" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -390,9 +402,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/employee.log" />
-    <entry file="file://$PROJECT_DIR$/one.py" />
-    <entry file="file://$PROJECT_DIR$/sample.log" />
     <entry file="file://$PROJECT_DIR$/logs.log" />
     <entry file="file://$PROJECT_DIR$/two.py" />
     <entry file="file://$PROJECT_DIR$/one.py" />
@@ -492,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pottery/models/products.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pottery/models/pagination.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -520,16 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pottery/converters/product_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.pyenv/versions/pottery/lib/python3.6/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13319">
@@ -541,20 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="3" selection-start-line="16" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pottery/entities/products.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -643,35 +621,97 @@
     <entry file="file://$PROJECT_DIR$/pottery/logs/product_catalog.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/pottery/resources/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/pottery/lib/python3.6/site-packages/werkzeug/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="2017" column="6" selection-start-line="2017" selection-start-column="6" selection-end-line="2017" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/pottery/lib/python3.6/site-packages/flask/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="181" column="23" lean-forward="true" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/practice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="159" column="57" selection-start-line="159" selection-start-column="57" selection-end-line="159" selection-end-column="57" />
+        <state relative-caret-position="16">
+          <caret line="165" column="35" lean-forward="true" selection-start-line="165" selection-start-column="35" selection-end-line="165" selection-end-column="35" />
           <folding>
             <element signature="e#904#933#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pottery/resources/exceptions.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pottery/testing/test_product_catalog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pottery/resources/product_catalog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="570">
+          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pottery/testing/test_product_catalog.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pottery/entities/products.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pottery/models/products.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pottery/test_pottery/test_converters/test_product_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pottery/converters/product_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
