@@ -1,3 +1,2 @@
 class PotteryException(Exception):
     pass
-

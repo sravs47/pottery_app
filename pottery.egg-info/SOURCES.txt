@@ -1,3 +1,4 @@
+setup.py
 pottery/__init__.py
 pottery/views.py
 pottery.egg-info/PKG-INFO
@@ -5,3 +6,18 @@ pottery.egg-info/SOURCES.txt
 pottery.egg-info/dependency_links.txt
 pottery.egg-info/requires.txt
 pottery.egg-info/top_level.txt
+pottery/converters/__init__.py
+pottery/converters/product_converter.py
+pottery/entities/__init__.py
+pottery/entities/products.py
+pottery/middleware/__init__.py
+pottery/middleware/product_orchestrator.py
+pottery/models/__init__.py
+pottery/models/pagination.py
+pottery/models/products.py
+pottery/resources/Data.py
+pottery/resources/__init__.py
+pottery/resources/exceptions.py
+pottery/resources/product_catalog.py
+pottery/resources/utils.py
+pottery/validators/__init__.py

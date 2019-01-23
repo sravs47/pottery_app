@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - "27017:27017"
+

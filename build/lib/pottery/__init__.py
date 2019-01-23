@@ -13,9 +13,8 @@ import logging
 
 # Db connectin
 # If you are running this inside docker and want to connect to mongo on the host machine then DNS is 'host.docker.internal'
-# If you are using docker compose use the image name of the mongo with the port 'mongo:27017'
-# connect("mongodb://localhost:27017/pottery")
-connect("mongodb://mongo:27017/pottery")
+connect("mongodb://localhost:27017/pottery")
+
 name ="pottery"
 
 # temporary products
