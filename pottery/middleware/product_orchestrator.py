@@ -27,7 +27,6 @@ class product_middleware:
 
     def get_product(self, product_id):
         prod_data = products.product_entity.objects.get({'_id': product_id})
-        print(prod_data)
         return product_converter.product_entity_to_product(prod_data)
 
     def get_products(self,limit=10,marker=0):

@@ -1,9 +1,12 @@
-from flask import Flask,Blueprint
+import os
+
+from flask import Flask
+
 from pottery.resources.product_catalog import potteryapp
+
 # object creation
 app = Flask(__name__)
 app.register_blueprint(potteryapp)
-
 
 import pottery.views
 import pottery.resources.product_catalog
@@ -15,8 +18,9 @@ import logging
 # If you are running this inside docker and want to connect to mongo on the host machine then DNS is 'host.docker.internal'
 # If you are using docker compose use the image name of the mongo with the port 'mongo:27017'
 # connect("mongodb://localhost:27017/pottery")
-connect("mongodb://mongo:27017/pottery")
-name ="pottery"
+# connect("mongodb://mongo:27017/pottery")
+connect(f'mongodb://{os.environ["connectionstring"]}:27017/pottery')
+name = "pottery"
 
 # temporary products
 # create list of product models.
@@ -32,4 +36,4 @@ formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0", debug=True)

@@ -1,6 +1,6 @@
 import json
 from logging import getLogger as logger
-
+from pottery.validators.validations import productvalidator
 from flask import Response, request, Blueprint
 
 from pottery.middleware.product_orchestrator import product_middleware
@@ -15,18 +15,14 @@ potteryapp = Blueprint('potteryapp',__name__)
 def get_products():
     limit = int(request.args.get('limit', 10))  # 10 is default value if limit is not sent
     marker = int(request.args.get('marker', 0))
-
     get_products = product_middleware().get_products(limit, marker)
     products = []
     for product in get_products:
         products.append(to_dict(product))
-
     paginated: dict = to_dict(pagination.Pagination(limit, marker, 'products'))
-
     resp = {
         'products':products,
         'pagination':paginated
-
     }
     return Response(json.dumps(resp), 200, mimetype=JSON_MIME_TYPE)
 
@@ -40,6 +36,7 @@ def get_product(product_id):
 
 
 @potteryapp.route('/products', methods=['POST'])
+@productvalidator
 def add_product():
     status = 201
     resp = None

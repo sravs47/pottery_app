@@ -2,7 +2,7 @@ import pytest
 from pottery.converters.product_converter import product_entities_to_products,product_entity_to_product,product_to_product_entity
 from pottery.entities.products import product_entity
 from pottery.models.products import Product
-import  itertools
+import itertools
 
 def test_product_entities_to_products():
     pe = product_entity()
