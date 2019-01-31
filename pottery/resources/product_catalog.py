@@ -1,18 +1,34 @@
 import json
 from logging import getLogger as logger
 from pottery.validators.validations import productvalidator
-from flask import Response, request, Blueprint
-
+from flask import Response, request, Blueprint, g
 from pottery.middleware.product_orchestrator import product_middleware
 from pottery.models import products, pagination
 from pottery.resources.exceptions import PotteryException
 from .utils import JSON_MIME_TYPE, to_dict
 
+
 potteryapp = Blueprint('potteryapp',__name__)
+
+
+user_credentials = {
+    "sravani":"sravani",
+    "nithin":"nithin"
+}
+
+@potteryapp.before_request
+def before_potteryapp_request():
+    print('Before request .......')
+    username = request.authorization.username
+    password = request.authorization.password
+    if user_credentials[username] != password:
+        raise PotteryException("Username or Password doestn match")
+
 
 # get all products using pagination
 @potteryapp.route('/products')
 def get_products():
+
     limit = int(request.args.get('limit', 10))  # 10 is default value if limit is not sent
     marker = int(request.args.get('marker', 0))
     get_products = product_middleware().get_products(limit, marker)
@@ -25,7 +41,6 @@ def get_products():
         'pagination':paginated
     }
     return Response(json.dumps(resp), 200, mimetype=JSON_MIME_TYPE)
-
 
 @potteryapp.route('/products/<int:product_id>')
 def get_product(product_id):

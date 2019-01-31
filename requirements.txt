@@ -4,3 +4,4 @@ pymodm
 pymongo
 mongo
 requests_mock
+Flask-HTTPAuth
