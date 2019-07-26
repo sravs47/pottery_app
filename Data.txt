@@ -6,8 +6,8 @@ products_list =[{
     'weight':10,
     'dimentions':'1x1x2',
     'price':10,
-    'image':'1.jpg'
-
+    'image':'1.jpg',
+    'Something':'new'
 },{
     'id':2,
     'name':'Mug 2',
